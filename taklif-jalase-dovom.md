@@ -41,6 +41,12 @@ project
     ├── pages
     └── py
 ```
+
+
+
+
+
+
 ubuntu@ubuntu:~$ echo "Hello" >info.txt
 ubuntu@ubuntu:~$ cat info.txt
 Hello
@@ -59,3 +65,9 @@ ubuntu@ubuntu:~$ ls -li hardlink.txt softlink.txt
 15935 -rw-rw-r-- 1 ubuntu ubuntu 6 Nov  1 12:17 hardlink.txt
 15951 lrwxrwxrwx 1 ubuntu ubuntu 8 Nov  1 12:19 softlink.txt -> info.txt
 ubuntu@ubuntu:~$ 
+
+
+
+
+
+
