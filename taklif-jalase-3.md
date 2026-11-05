@@ -27,3 +27,27 @@ grep -c root /etc/passwd
 ```bash
 grep root /etc/passwd | wc -l
 ```
+## تکلیف شماره 2
+### جست‌وجوی فایل‌های `.conf` در `/etc` با `find`
+
+```bash
+find /etc -name "*.conf"
+```
+
+بخشی از خروجی:
+
+```
+/etc/NetworkManager/NetworkManager.conf
+/etc/NetworkManager/conf.d/default-wifi-powersave-on.conf
+/etc/PackageKit/PackageKit.conf
+/etc/PackageKit/Vendor.conf
+/etc/UPower/UPower.conf
+/etc/adduser.conf
+/etc/alsa/conf.d/50-pipewire.conf
+/etc/alsa/conf.d/99-pipewire-default.conf
+/etc/apparmor/parser.conf
+/etc/apport/crashdb.conf
+...
+```
+
+`find` به‌صورت پیش‌فرض بازگشتی است و زیرشاخه‌های `/etc` را هم می‌گردد. سویچ `-name "*.conf"` فقط فایل‌هایی را که نامشان به `.conf` ختم می‌شود انتخاب می‌کند. پیام‌های `Permission denied` مربوط به پوشه‌هایی است که کاربر عادی اجازه خواندنشان را ندارد.
